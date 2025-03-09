@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sims Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Sims Tree</h1>
+        <nav>
+            <ul>
+                <li><a href="#create-tree">Create Tree</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="create-tree">
+            <h2>Create Your Family Tree</h2>
+            <form id="tree-form">
+                <label for="sim-name">Sim Name:</label>
+                <input type="text" id="sim-name" name="sim-name" required>
+                
+                <label for="sim-photo">Sim Photo:</label>
+                <input type="file" id="sim-photo" name="sim-photo" accept="image/*" required>
+                
+                <label for="sim-relationship">Relationship:</label>
+                <select id="sim-relationship" name="sim-relationship" required>
+                    <option value="parent">Parent</option>
+                    <option value="sibling">Sibling</option>
+                    <option value="partner">Partner</option>
+                    <option value="child">Child</option>
+                </select>
+                
+                <label for="sim-bio">Biography:</label>
+                <textarea id="sim-bio" name="sim-bio"></textarea>
+                
+                <button type="submit">Add Sim</button>
+            </form>
+            <div id="tree-preview"></div>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div id="gallery-content"></div>
+        </section>
+        <section id="community">
+            <h2>Community</h2>
+            <div id="community-content"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
